@@ -1,0 +1,191 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    width: 90%;
+    max-width: 980px;
+    margin: 20px;
+}
+
+.lado-esquerdo {
+    padding: 40px;
+    color: #000;
+    text-align: left;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lado-esquerdo h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.lado-esquerdo p {
+    font-size: 1.5rem; 
+}
+
+.lado-direito {
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form input {
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.login-form button[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button[type="submit"]:hover {
+    background-color: #333;
+}
+
+.login-form hr {
+    border: none; 
+    border-bottom: 1px solid #ddd; 
+    margin: 20px 0; 
+}
+
+.botao-entrar {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.botao-entrar:hover {
+    background-color: #333;
+}
+
+.esqueceu-senha {
+    color: #1877f2;
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.esqueceu-senha:hover {
+    text-decoration: underline; 
+}
+
+.nova-conta {
+    background-color: #42b72a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.nova-conta:hover {
+    background-color: #24531a;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0;
+    }
+
+    .lado-esquerdo {
+        padding: 40px;
+        text-align: center;
+    }
+
+    .lado-esquerdo h1 {
+        font-size: 2.5rem;
+    }
+
+    .lado-esquerdo p {
+        font-size: 1.2rem;
+    }
+
+    .lado-direito {
+        padding: 40px;
+    }
+
+    .login-form {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .lado-esquerdo {
+        padding: 30px;
+    }
+
+    .lado-esquerdo h1 {
+        font-size: 2rem;
+    }
+
+    .lado-esquerdo p {
+        font-size: 1rem;
+    }
+
+    .lado-direito {
+        padding: 30px;
+    }
+
+    .login-form input,
+    .login-form button {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .nova-conta {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}

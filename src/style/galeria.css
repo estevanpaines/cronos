@@ -1,0 +1,187 @@
+/* Estilos para a página de Galeria */
+
+html, body {
+    height: auto; /* Ajusta a altura para o conteúdo */
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 15px 20px;
+    /* Remove o position: fixed */
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header-nav ul li {
+    margin-left: 20px;
+}
+
+.header-nav ul li:first-child {
+    margin-left: 0;
+}
+
+.header-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.header-nav ul li a:hover {
+    background-color: #333;
+}
+
+.gallery-page {
+    flex: 1; /* Ocupa o espaço restante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto; /* Permite rolagem da galeria */
+    padding: 20px; /* Padding padrão */
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Cria duas colunas */
+    gap: 20px; /* Espaçamento entre as fotos */
+    max-width: 1200px; /* Largura máxima do container da galeria */
+    width: 90%; /* Ocupa 90% da largura da tela */
+    /* Remove a altura fixa para permitir rolagem */
+    /* height: 90%; */
+    margin: 40px 0; /* Adiciona margem superior e inferior para separar do header/footer */
+}
+
+.gallery-container img {
+    width: 100%;
+    height: auto; /* Ajusta a altura automaticamente */
+    object-fit: cover; /* Preenche o espaço mantendo a proporção */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.main-footer {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    /* Remove o position: fixed */
+    /* position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; */
+}
+
+.footer-content {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+    display: flex;
+}
+
+.footer-content ul li {
+    margin: 0 15px;
+}
+
+.footer-content ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.links-social {
+    display: flex;
+    margin: 5px 0;
+}
+
+.links-social a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    background-color: #000;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+}
+
+.links-social a:hover {
+    background-color: #333;
+}
+
+.top-button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin: 5px 0;
+    background-color: #000;
+    border-radius: 5px;
+    padding: 8px 12px;
+}
+
+.top-button:hover {
+    background-color: #333;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        width: 95%;
+        /* Remove a altura fixa */
+        height: auto;
+    }
+
+    .gallery-container img {
+        margin-bottom: 15px; /* Adiciona espaço entre as fotos na vertical */
+    }
+}

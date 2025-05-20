@@ -1,0 +1,281 @@
+/* Estilos para a página Sobre Nós simplificada - Tela Inteira com Cabeçalho e Rodapé */
+
+html, body {
+    height: 100%; /* Garante que html e body ocupem toda a altura da janela */
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #121212; /* Fundo preto */
+    color: #fff; /* Texto branco padrão */
+    overflow: auto; /* Permite rolagem se o conteúdo exceder a tela */
+    display: flex;
+    flex-direction: column; /* Organiza os filhos (header, main, footer) verticalmente */
+}
+
+.main-header {
+    background-color: #1e1e1e; /* Cor de fundo do cabeçalho */
+    color: #fff; /* Cor do texto do cabeçalho */
+    padding: 15px 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Espaça o logo e a navegação */
+    align-items: center;
+    max-width: 1200px; /* Largura máxima do conteúdo do cabeçalho */
+    margin: 0 auto; /* Centraliza o conteúdo do cabeçalho */
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header-nav ul li {
+    margin-left: 20px; /* Espaço entre os botões */
+}
+
+.header-nav ul li:first-child {
+    margin-left: 0; /* Remove a margem do primeiro item */
+}
+
+.header-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Efeito de transição suave */
+}
+
+.header-nav ul li a:hover {
+    background-color: #333; /* Cor de fundo ao passar o mouse */
+}
+
+.about-page {
+    display: flex;
+    flex: 1; /* Permite que a seção principal cresça para ocupar o espaço restante */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    padding: 40px 20px; /* Adiciona um pouco de padding ao redor */
+}
+
+.about-container {
+    display: flex;
+    max-width: 960px; /* Largura máxima do conteúdo */
+    width: 90%;
+    border-radius: 10px;
+    overflow: hidden; /* Garante que a onda não ultrapasse as bordas */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sutil sombra para destacar */
+}
+
+.about-image {
+    width: 40%; /* Largura da imagem */
+    position: relative;
+}
+
+.about-image img {
+    display: block;
+    width: 100%;
+    height: 100%; /* Preenche a altura do container */
+    object-fit: cover;
+}
+
+/* Borda ondulada vertical suave */
+.about-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 60px; /* Largura da área da onda (aumentei para suavizar) */
+}
+
+.about-content {
+    width: 60%; /* Largura do conteúdo de texto */
+    padding: 60px; /* Aumentei o padding para mais espaço */
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.8); /* Adicionei um fundo preto semi-transparente para o texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o texto verticalmente no espaço */
+}
+
+.about-content h1 {
+    font-size: 3rem; /* Aumentei a fonte do título */
+    color: #fff; /* Garante que o título seja branco */
+    margin-bottom: 30px;
+}
+
+.about-content p {
+    font-size: 1.1rem; /* Aumentei um pouco a fonte do parágrafo */
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #fff; /* Garante que os parágrafos sejam brancos */
+}
+
+.main-footer {
+    background-color: #1e1e1e; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto do rodapé */
+    padding: 20px;
+    text-align: center; /* Alinha o texto centralmente por padrão */
+    margin-top: 40px; /* Adiciona um espaço acima do rodapé */
+}
+
+.footer-content {
+    color: #fff;
+    display: flex;
+    justify-content: space-between; /* Espaça os elementos internos */
+    align-items: center; /* Alinha verticalmente os elementos */
+    max-width: 1200px; /* Largura máxima para o conteúdo do rodapé */
+    margin: 0 auto; /* Centraliza o conteúdo do rodapé */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+    display: flex;
+}
+
+.footer-content ul li {
+    margin: 0 15px;
+}
+
+.footer-content ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.links-social {
+    display: flex;
+    margin: 5px 0;
+}
+
+.links-social a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    background-color: #000; /* Cor de fundo dos links */
+    border-radius: 5px;
+    padding: 8px 12px; /* Adicionei padding horizontal para o texto */
+    font-size: 0.9rem;
+}
+
+.links-social a:hover {
+    background-color: #333;
+}
+
+.top-button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin: 5px 0;
+    background-color: #000; /* Cor de fundo igual aos links sociais */
+    border-radius: 5px; /* Bordas arredondadas iguais aos links sociais */
+    padding: 8px 12px; /* Padding igual aos links sociais */
+}
+
+.top-button:hover {
+    /* Adicione um efeito de hover, se desejar */
+    background-color: #333;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .main-header {
+        text-align: center; /* Centraliza o conteúdo do cabeçalho em telas menores */
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .header-nav ul li {
+        margin: 10px 0;
+    }
+
+    .about-page {
+        padding: 20px; /* Reduz o padding em telas menores */
+    }
+
+    .about-container {
+        flex-direction: column;
+        width: 95%;
+        height: auto; /* Altura automática para caber o conteúdo */
+    }
+
+    .about-image {
+        width: 100%;
+        height: 300px; /* Altura fixa para a imagem em telas menores */
+    }
+
+    .about-image::after {
+        display: none; /* Remove a onda em telas menores */
+    }
+
+    .about-content {
+        width: 100%;
+        padding: 40px;
+        text-align: center;
+        background-color: #121212; /* Fundo preto sólido em telas menores */
+    }
+
+    .about-content h1 {
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+        text-align: left; /* Texto alinhado à esquerda em telas menores para melhor leitura */
+    }
+
+    .main-footer {
+        margin-top: 20px; /* Reduz a margem superior do rodapé em telas menores */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-content ul {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .footer-content ul li {
+        margin: 0 10px;
+    }
+
+    .links-social {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
